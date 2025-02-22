@@ -114,7 +114,7 @@ Images to demonstrate the user interface:
 ## Resources
 
 ### 📄 PowerPoint Presentation
-[https://docs.google.com/presentation/d/19XhtAMVw6ZdLF5_w4IJ_bJ3gqQGOS3Hw/edit#slide=id.p1]()
+[https://docs.google.com/presentation/d/19XhtAMVw6ZdLF5_w4IJ_bJ3gqQGOS3Hw/edit?usp=drive_link&ouid=110478117329522425471&rtpof=true&sd=true]
 
 ### 🎥 Project Video
 [Click here to view the project demo video](https://drive.google.com/file/d/1OlMgQalrLnAv0NG406g6KL06BL8KonMI/view?usp=drive_link)
