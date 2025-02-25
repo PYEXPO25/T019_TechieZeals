@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Sentinel - Water Monitoring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            background: #000;
+            position: relative;
+        }
+       
+        /* Fast Water Wave Text */
+        .wave-container {
+            position: relative;
+            display: inline-block;
+            font-size: 6rem;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 2px #007bff;
+        }
+        
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #007bff;
+            overflow: hidden;
+            clip-path: polygon(
+                0% 50%, 10% 60%, 20% 50%, 30% 40%, 40% 50%, 
+                50% 60%, 60% 50%, 70% 40%, 80% 50%, 90% 60%, 
+                100% 50%, 100% 100%, 0% 100%
+            );
+            animation: wave 0.8s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;
+        }
+
+        @keyframes wave {
+            0% {
+                clip-path: polygon(
+                    0% 45%, 10% 55%, 20% 45%, 30% 35%, 40% 45%, 
+                    50% 55%, 60% 45%, 70% 35%, 80% 45%, 90% 55%, 
+                    100% 45%, 100% 100%, 0% 100%
+                );
+            }
+            100% {
+                clip-path: polygon(
+                    0% 55%, 10% 45%, 20% 55%, 30% 65%, 40% 55%, 
+                    50% 45%, 60% 55%, 70% 65%, 80% 55%, 90% 45%, 
+                    100% 55%, 100% 100%, 0% 100%
+                );
+            }
+        }
+
+        /* Monitoring Section */
+        .monitoring-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin-top: 50px;
+            background: rgba(0, 0, 40, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+            text-align: center;
+            color: white;
+        }
+        .monitoring-box {
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 255, 0.3);
+            width: 200px;
+        }
+        
+        /* Ocean Waves Footer */
+        .ocean {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to top, #001f3f, transparent);
+            overflow: hidden;
+        }
+        .wave-footer {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: url('https://cdn.jsdelivr.net/gh/tholman/wavey/wavey.svg');
+            background-size: cover;
+            filter: hue-rotate(220deg) brightness(1.4);
+            animation: wave-motion 4s infinite linear;
+        }
+        .wave-footer:nth-child(2) { animation-duration: 6s; opacity: 0.7; }
+        .wave-footer:nth-child(3) { animation-duration: 8s; opacity: 0.5; }
+
+
+         .logout {
+    position: fixed;
+    top: 10px;   /* Distance from the top */
+    left: 10px;  /* Distance from the left */
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Optional: Change the button color */
+    color: white; /* Optional: Change text color */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  .logout:hover {
+    background-color: #ff1a1a; /* Optional: Change color on hover */
+  }
+  .dropdown {
+    position: fixed;
+    top: 10px;   /* Distance from the top */
+    left: 10px;  /* Distance from the left */
+    padding: 10px 20px;
+    /* Optional: Change the button color */
+    color: white; /* Optional: Change text color */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown button {
+      background-color: #010101;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #231e6a;
+      min-width: 250px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Style for each item in the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color when hovering over a dropdown item */
+    .dropdown-content a:hover {
+      background-color: #231e6a;
+    }
+
+    /* Show the dropdown content when hovering over the dropdown */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change color of button on hover */
+    .dropdown button:hover {
+      background-color: #231e6a;
+    }
+    </style>
+</head>
+<body>
+    <h1 style="color: red; font-size:25px; font-style: bold; ">Real Time Water Flow</h1>
+    <div class="wave-container">
+        AQUA SENTINEL
+        <div class="wave">AQUA SENTINEL</div>
+    </div>
+    <div class="dropdown">
+        <button>☰</button>
+
+        <div class="dropdown-content">
+            <h1 style="color: rgb(247, 247, 247);  font-style: bold;">Last Service : 01/01/2025</h1>
+            <h1 style = "color: rgb(254, 254, 254);  font-style: bold;">Last Filter Changed : 01/01/2025</h1>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+      </div>
+   
+    <div class="monitoring-container">
+        <div class="monitoring-box">
+            <h3>pH Monitoring</h3>
+            <p id="ph-value">7.5</p>
+        </div>
+        <div class="monitoring-box">
+            <h3>Flow Rate Monitoring</h3>
+            <p id="flow-rate">3.15 L/min</p>
+        </div>
+        <div class="monitoring-box">
+            <h3>TDS</h3>
+            <p id="tds-rate">100 ppm</p>
+        </div>
+        
+    </div>
+    
+    <div class="ocean">
+        <div class="wave-footer"></div>
+        <div class="wave-footer"></div>
+        <div class="wave-footer"></div>
+    </div>
+
+    <script>
+          function logout() {
+            // Example: Redirecting to a logout URL or clearing session
+            window.location.href = '/logout'; // Replace with your actual logout URL
+        }
+        // Fetch data from the /get_data endpoint
+        fetch('/get_data')
+            .then(response => response.json())
+            .then(data => {
+                // Extract the sensor data (ph, flowRate, and tds) from the response
+                const phValue = data.sensor.ph;
+                const flowRate = data.sensor.flowRate;
+                const TDS = data.sensor.tds;
+
+                // Update the corresponding elements in the HTML with the fetched data
+                document.getElementById('ph-value').textContent = phValue.toFixed(2);
+                document.getElementById('flow-rate').textContent = `${flowRate.toFixed(2)} L/min`;
+                document.getElementById('tds-rate').textContent = `${TDS.toFixed(2)} ppm`;
+
+                // If the flow rate is 0, stop the animation and display the name only
+                if (flowRate === 0) {
+                    // Stop the wave animation
+                    document.querySelector('.wave').style.animation = 'none';
+                    document.querySelector('.wave').style.color = 'transparent'; // Make the wave text invisible
+                    
+                    // Optionally, change flow rate text
+                    document.getElementById('flow-rate').textContent = 'Flow stopped';
+                }
+            })
+            
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                alert('There was an error fetching the data.');
+            });
+    </script>
+</body>
+</html>

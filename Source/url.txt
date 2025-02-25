@@ -1,0 +1,141 @@
+https://aqua-sentinel-357b7-default-rtdb.asia-southeast1.firebasedatabase.app/
+
+    <style>
+        body {
+            background: url('final image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        .login-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(0, 204, 255, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 204, 255, 0.7);
+        }
+        
+        input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.5);
+            color: white;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: cyan;
+            box-shadow: 0 0 15px cyan;
+        }
+
+        .neon-button {
+            background: #00bfff;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 0 15px #00bfff;
+        }
+
+        .neon-button:hover {
+            background: #00ffff;
+            box-shadow: 0 0 25px #00ffff;
+        }
+    </style>
+
+        <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            background: #000;
+            position: relative;
+        }
+       
+        /* Fast Water Wave Text */
+        .wave-container {
+            position: relative;
+            display: inline-block;
+            font-size: 6rem;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 2px #007bff;
+        }
+        
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #007bff;
+            overflow: hidden;
+            clip-path: polygon(
+                0% 50%, 10% 60%, 20% 50%, 30% 40%, 40% 50%, 
+                50% 60%, 60% 50%, 70% 40%, 80% 50%, 90% 60%, 
+                100% 50%, 100% 100%, 0% 100%
+            );
+            animation: wave 0.8s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;
+        }
+
+        @keyframes wave {
+            0% {
+                clip-path: polygon(
+                    0% 45%, 10% 55%, 20% 45%, 30% 35%, 40% 45%, 
+                    50% 55%, 60% 45%, 70% 35%, 80% 45%, 90% 55%, 
+                    100% 45%, 100% 100%, 0% 100%
+                );
+            }
+            100% {
+                clip-path: polygon(
+                    0% 55%, 10% 45%, 20% 55%, 30% 65%, 40% 55%, 
+                    50% 45%, 60% 55%, 70% 65%, 80% 55%, 90% 45%, 
+                    100% 55%, 100% 100%, 0% 100%
+                );
+            }
+        }
+
+        /* Monitoring Section */
+        .monitoring-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin-top: 50px;
+            background: rgba(0, 0, 40, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+            text-align: center;
+            color: white;
+        }
+        .monitoring-box {
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 255, 0.3);
+            width: 200px;
+        }
+        
+        /* Ocean Waves Footer */
+        .ocean {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to top, #001f3f, transparent);
+            overflow: hidden;
+        }
+        .wave-footer {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: url('https://cdn.jsdelivr.net/gh/tholman/wavey/wavey.svg');
+            background-size: cover;
+            filter: hue-rotate(220deg) brightness(1.4);
+            animation: wave-motion 4s infinite linear;
+        }
+        .wave-footer:nth-child(2) { animation-duration: 6s; opacity: 0.7; }
+        .wave-footer:nth-child(3) { animation-duration: 8s; opacity: 0.5; }
+    </style>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Sentinel Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('static/final image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        .login-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(0, 204, 255, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 204, 255, 0.7);
+        }
+        
+        input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.5);
+            color: white;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: cyan;
+            box-shadow: 0 0 15px cyan;
+        }
+
+        .neon-button {
+            background: #00bfff;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 0 15px #00bfff;
+        }
+
+        .neon-button:hover {
+            background: #00ffff;
+            box-shadow: 0 0 25px #00ffff;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md p-8 space-y-6 rounded-lg shadow-lg login-box">
+        <h2 class="text-center text-3xl font-extrabold text-white">Login to Your Account</h2>
+        <form id="loginForm" class="space-y-4">
+            <div>
+                <label class="block text-white">MACHINE ID</label>
+                <input type="text" id="machineId" class="w-full px-4 py-2 rounded-lg">
+            </div>
+            <div>
+                <label class="block text-white">Password</label>
+                <input type="password" id="password" class="w-full px-4 py-2 rounded-lg">
+            </div>
+            <button type="button" class="w-full px-4 py-2 font-bold rounded-lg neon-button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const machineId = document.getElementById("machineId").value;
+            const password = document.getElementById("password").value;
+
+            if (machineId === "T019@25" && password === "1234") {  // Example credentials
+                window.location.href = "index";// Redirect to the next page
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>

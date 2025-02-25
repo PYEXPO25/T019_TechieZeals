@@ -1,0 +1,14 @@
+{
+  "type": "service_account",
+  "project_id": "aqua-sentinel-357b7",
+  "private_key_id": "83212ea5f554418101ef77e0945fea35e1bfff59",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC29jpCBKYo5dnv\nniX1ca7DIj2l7f1NooHOQRpeh0Jfgu0ZZbkPcdnfUYQvVO/x7cKAwHzeRAPoOsNu\nbMDcQQDqXN9BH2KCRPoR26rwU4WfMkK6GMFXPFgDxdF+GbXelBytK3Y3rv9f0CDy\nMt4nqenEpPlZsl78FChkeVdavFscHzleVCfqd6bKYpciODsA+wR99/FUqv6OR3RE\nS/CNdktLB2nN3ghHPXEdeqSLjIXLpGC94ANoXsEQgBhIGH74TW32rxV+y3TIQc80\nZsbJtDJ/5qsTC9RjlATDGOztID0QzUDnmj0iMatQfD3YOjyk8H72O/ix+YQi20nx\nSD9yRf7NAgMBAAECggEAAlb4TcEZSLEnEPYHa4NLepFZQb9TeMEkn6HKxkM8ut9o\nwJ9kq3S2FkjrlTB2bFcllMwbjK9f+5kbU5qiy6hzshcyIpoQDfr3SkGJhuYpFHi7\nb1q3U1UVlZpnMeL+1FEHTH0T4x+umaISX5rmBDV4gZChb1PCWZCKPvgjuzRRnZec\nK5HCmEpAJUEzNG8l6c/NABWqqNfwOiRkTjOb8TXIU+rJqJGD7Qzpn4p93Gba04DW\np4YnCKfnGqAL4+VHhMFyl24brAzsiDVJ06b6X7ieZFMigKC0nCpMl2K4TO1GbzvU\nF3TXw6GWONrwb+bfwp8dp5o9EpLBlqhmiIWCBW37PQKBgQDomvFllt2kRwPUKjgu\n+JyuHHJrLMtMzL5tyIYFD+0eZqWtZ0pTx5dlouwLyNLLbK5yG6h3wGiysnI2thWW\nyFArp8EWxoFzOlRW9Vb2Lo/eubsVfnuvh+X8OsDd1hacH1Uha3gUPqbDZWBuQrWy\n4uizFAy5cm5ugONkJP0+/tVegwKBgQDJXRRKPT1LuU11zNK0oQRsk000MXc8DCe5\nzKJN3+vXCiPGUQDL2I7Rm+ZjyF23UW2732w4E0BMvchbfikS1FzfLvnunwEL2BHH\n0mgjpKQcudi/VW/N17V3Zft2eEZGu9nMHpKjl8sYtj5EESHlTIXy36J5uyqfPToK\nOgW/UxasbwKBgEzcplgDekoGjWVWbipXTK7cB5MSwjsmjOaKFH8nvBsHoEekkhMN\nKSIUrBtYyQ8fYqWiLhEkK3ShMsyRbqDcoGFMlamI/s2swKHbgFjpGfFnPkLkAMsI\nBR9L6t9jFyWP1PmuIYfPDBwVK8BDmvb5tBs4zNuazJMHVByLfIOMgcUxAoGBALId\n7pu4zeaUtAsWse9rWtF7/tfDRbhM/Dri41LFVwVxh7Gd53lpRvPs1n+/Nf65Pbro\n5/42MTNw0LD1yPlJ9hjJofVMmw1SBHBgExQsR6rNTgf5WBuZyoAiKqxhubBJ7F8d\nUBL7a4ChfDSTfwsohHgRD9RkFlCjRRrUtk7F/ZFrAoGAblogB6b3i27cW5eC59Wk\nLa3pGjWJ7Hromy3f3i32IiAsiHC/1Hot38OcSUHtqTfRKXjhlkj8pj0ABFPMFlGL\ngs2+HpatYZWG5dh+gElhC4PcLNU2HWkXtuU9Gr8A+yDAR+UQcXPrSgGonvho/CqW\n5NVRWGcyyVfP/ZrK/luHAaY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@aqua-sentinel-357b7.iam.gserviceaccount.com",
+  "client_id": "104684615613180937988",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40aqua-sentinel-357b7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
