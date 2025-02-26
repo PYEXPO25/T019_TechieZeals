@@ -16,8 +16,7 @@
             background: #000;
             position: relative;
         }
-       
-        /* Fast Water Wave Text */
+
         .wave-container {
             position: relative;
             display: inline-block;
@@ -26,7 +25,7 @@
             color: transparent;
             -webkit-text-stroke: 2px #007bff;
         }
-        
+
         .wave {
             position: absolute;
             top: 0;
@@ -60,7 +59,6 @@
             }
         }
 
-        /* Monitoring Section */
         .monitoring-container {
             display: flex;
             justify-content: space-around;
@@ -81,8 +79,7 @@
             background: rgba(0, 0, 255, 0.3);
             width: 200px;
         }
-        
-        /* Ocean Waves Footer */
+
         .ocean {
             position: absolute;
             bottom: 0;
@@ -104,96 +101,62 @@
         .wave-footer:nth-child(2) { animation-duration: 6s; opacity: 0.7; }
         .wave-footer:nth-child(3) { animation-duration: 8s; opacity: 0.5; }
 
+        .dropdown {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
 
-         .logout {
-    position: fixed;
-    top: 10px;   /* Distance from the top */
-    left: 10px;  /* Distance from the left */
-    padding: 10px 20px;
-    background-color: #ff4d4d; /* Optional: Change the button color */
-    color: white; /* Optional: Change text color */
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
+        .dropdown button {
+            background-color: #010101;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
 
-  .logout:hover {
-    background-color: #ff1a1a; /* Optional: Change color on hover */
-  }
-  .dropdown {
-    position: fixed;
-    top: 10px;   /* Distance from the top */
-    left: 10px;  /* Distance from the left */
-    padding: 10px 20px;
-    /* Optional: Change the button color */
-    color: white; /* Optional: Change text color */
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #231e6a;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-    /* Style for the dropdown button */
-    .dropdown button {
-      background-color: #010101;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-    /* Dropdown content (hidden by default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #231e6a;
-      min-width: 250px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+        .dropdown-content a:hover {
+            background-color: #1e144a;
+        }
 
-    /* Style for each item in the dropdown */
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    /* Change color when hovering over a dropdown item */
-    .dropdown-content a:hover {
-      background-color: #231e6a;
-    }
-
-    /* Show the dropdown content when hovering over the dropdown */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Change color of button on hover */
-    .dropdown button:hover {
-      background-color: #231e6a;
-    }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <h1 style="color: red; font-size:25px; font-style: bold; ">Real Time Water Flow</h1>
+    <h1 style="color: red; font-size:25px; font-weight: bold;">Real Time Water Flow</h1>
     <div class="wave-container">
         AQUA SENTINEL
         <div class="wave">AQUA SENTINEL</div>
     </div>
+    
     <div class="dropdown">
         <button>☰</button>
-
         <div class="dropdown-content">
-            <h1 style="color: rgb(247, 247, 247);  font-style: bold;">Last Service : 01/01/2025</h1>
-            <h1 style = "color: rgb(254, 254, 254);  font-style: bold;">Last Filter Changed : 01/01/2025</h1>
+            <h1 style="color: white; font-weight: bold;">Last Service: 01/01/2025</h1>
+            <h1 style="color: white; font-weight: bold;">Last Filter Changed: 01/01/2025</h1>
             <a href="#" onclick="logout()">Logout</a>
         </div>
-      </div>
-   
+    </div>
+
     <div class="monitoring-container">
         <div class="monitoring-box">
             <h3>pH Monitoring</h3>
@@ -207,9 +170,8 @@
             <h3>TDS</h3>
             <p id="tds-rate">100 ppm</p>
         </div>
-        
     </div>
-    
+
     <div class="ocean">
         <div class="wave-footer"></div>
         <div class="wave-footer"></div>
@@ -217,35 +179,27 @@
     </div>
 
     <script>
-          function logout() {
-            // Example: Redirecting to a logout URL or clearing session
-            window.location.href = '/logout'; // Replace with your actual logout URL
+        function logout() {
+            window.location.href = '/logout';
         }
-        // Fetch data from the /get_data endpoint
+
         fetch('/get_data')
             .then(response => response.json())
             .then(data => {
-                // Extract the sensor data (ph, flowRate, and tds) from the response
                 const phValue = data.sensor.ph;
                 const flowRate = data.sensor.flowRate;
                 const TDS = data.sensor.tds;
 
-                // Update the corresponding elements in the HTML with the fetched data
                 document.getElementById('ph-value').textContent = phValue.toFixed(2);
-                document.getElementById('flow-rate').textContent = `${flowRate.toFixed(2)} L/min`;
-                document.getElementById('tds-rate').textContent = `${TDS.toFixed(2)} ppm`;
+                document.getElementById('flow-rate').textContent = flowRate.toFixed(2) + " L/min";
+                document.getElementById('tds-rate').textContent = TDS.toFixed(2) + " ppm";
 
-                // If the flow rate is 0, stop the animation and display the name only
                 if (flowRate === 0) {
-                    // Stop the wave animation
                     document.querySelector('.wave').style.animation = 'none';
-                    document.querySelector('.wave').style.color = 'transparent'; // Make the wave text invisible
-                    
-                    // Optionally, change flow rate text
+                    document.querySelector('.wave').style.color = 'transparent';
                     document.getElementById('flow-rate').textContent = 'Flow stopped';
                 }
             })
-            
             .catch(error => {
                 console.error('Error fetching data:', error);
                 alert('There was an error fetching the data.');
